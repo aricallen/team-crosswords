@@ -1,0 +1,23 @@
+{
+  "name": "dev-box",
+  "version": "1.0.0",
+  "description": "project where I can write in ES2015 + and have it output to dist/ directory for inclusion into outside projects",
+  "main": "index.js",
+  "scripts": {
+    "dev": "babel --source-maps --watch src --out-dir dist",
+    "test": "mocha tests/**/*.test.js -w --compilers js:babel-register",
+    "build:browser": "babel --source-maps --watch tests/browser/src --out-dir tests/browser/dist"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.7.5",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.7.4",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-es2017": "^1.4.0",
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "node-fetch": "^1.5.3"
+  },
+  "dependencies": {}
+}

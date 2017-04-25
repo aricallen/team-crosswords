@@ -19,5 +19,7 @@
     "mocha": "^2.4.5",
     "node-fetch": "^1.5.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "handlebars": "^4.0.6"
+  }
 }

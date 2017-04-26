@@ -42,7 +42,7 @@ templating engine for rendering and handling user input
 
 **Proof of Concepts**
 
-* call to crosswords API to get JSON using `fetch`
+<!-- * call to crosswords API to get JSON using `fetch` -->
 * render a template using express
 * pass JSON data to a template
 * connect to a MongoDB database

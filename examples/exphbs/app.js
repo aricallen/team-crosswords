@@ -2,6 +2,8 @@ const express = require('express');
 const exphbs  = require('express-handlebars');
 const path = require('path');
 const app = express();
+const fetch = require('node-fetch');
+const endpoint = `http://www.xwordinfo.com/JSON/TrackData.aspx`;
 
 const hbs = exphbs.create({
   layoutsDir: `${__dirname}/views/layouts`,
@@ -19,6 +21,17 @@ app.get('/', function (req, res) {
   res.render(viewPath, {
     data: 'alsdkfj'
   });
+});
+
+app.get('/json', function (req, res) {
+  fetch(endpoint)
+    .then((response) => response.json())
+    .then((json) => {
+      const viewPath = `${__dirname}/views/json.hbs`;
+      res.render(viewPath, {
+        json: JSON.stringify(json)
+      });
+    });
 });
 
 app.listen(3000);

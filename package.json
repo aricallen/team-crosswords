@@ -18,8 +18,9 @@
     "chai": "^3.5.0",
     "express": "^4.15.2",
     "express-handlebars": "^3.0.0",
+    "jshint": "^2.9.4",
     "mocha": "^2.4.5",
-    "mongodb": "^2.2.26",
+    "mongoose": "^4.9.6",
     "node-fetch": "^1.5.3"
   },
   "dependencies": {}

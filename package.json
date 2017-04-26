@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "babel --source-maps --watch src --out-dir dist",
     "dev:fetch": "nodemon examples/fetch.js",
+    "dev:express": "nodemon examples/express.js",
+    "dev:exphbs": "nodemon examples/exphbs/app.js",
     "test": "mocha tests/**/*.test.js -w --compilers js:babel-register",
     "build:browser": "babel --source-maps --watch tests/browser/src --out-dir tests/browser/dist"
   },

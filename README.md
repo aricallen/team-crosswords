@@ -64,3 +64,11 @@ templating engine for rendering and handling user input
 * clues
 * show incorrect clues
 * hints?
+
+### Notes ###
+
+**ExpressHandlebars**
+
+`layouts` are html page wrappers with a `{{{body}}}` placeholder
+`views` are chosen by the route and rendered into the `{{{body}}}` placeholder
+default path of layouts can be configured by setting the `engine`'s `defaultPath` property when initializing in `express`

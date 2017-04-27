@@ -8,6 +8,8 @@
     "dev:fetch": "nodemon examples/fetch.js",
     "dev:express": "nodemon examples/express.js",
     "dev:exphbs": "nodemon examples/exphbs/app.js",
+    "dev:mongodb": "nodemon examples/mongodb.js",
+    "dev:pmongo": "nodemon examples/pmongo.js",
     "test": "mocha tests/**/*.test.js -w --compilers js:babel-register",
     "build:browser": "babel --source-maps --watch tests/browser/src --out-dir tests/browser/dist"
   },
@@ -26,7 +28,8 @@
     "mongodb": "^2.2.26",
     "mongoose": "^4.9.6",
     "node-fetch": "^1.5.3",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "promised-mongo": "^1.2.0"
   },
   "dependencies": {}
 }

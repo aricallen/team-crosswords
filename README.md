@@ -18,7 +18,9 @@ GET https://www.xwordinfo.com/JSON/TrackData.aspx?date=4%2F9%2F2017&Variety=fals
 
 ### Installation ###
 
-...
+* `npm install`
+* `mongod --dbpath <path to data directory>`
+* `npm start`
 
 ### Overview ###
 
@@ -47,7 +49,7 @@ templating engine for rendering and handling user input
 <!-- * call to crosswords API to get JSON using `fetch` -->
 <!-- * render a template using express -->
 <!-- * pass JSON data to a template -->
-* connect to a MongoDB database
+<!--* connect to a MongoDB database-->
 * CRUD on the DB
 
 **UX**

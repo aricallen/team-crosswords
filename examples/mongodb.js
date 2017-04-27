@@ -1,21 +1,13 @@
-var express = require('express');
-var app = express();
-var MongoClient = require('mongodb').MongoClient;
-var url = 'mongodb://localhost/EmployeeDB';
-var str = "";
+const MongoClient = require('mongodb').MongoClient
+const assert = require('assert');
 
-app.route('/Employeeid').get(function(req, res) {
-    MongoClient.connect(url, function(err, db) {
-      var cursor = db.collection('Employee').find();
+// Connection URL
+const url = 'mongodb://localhost:27017/team_crosswords';
 
-      cursor.each(function(err, item) {
-        if (item !== null) {
-          str = str + "    Employee id  " + item.Employeeid + "</br>";
-        }
-      });
-      res.send(str);
+// Use connect method to connect to the server
+MongoClient.connect(url, function(err, db) {
+  assert.equal(null, err);
+  console.log("Connected successfully to server");
 
-    });
-  });
-
-var server = app.listen(3000, function() {});
+  db.close();
+});

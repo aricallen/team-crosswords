@@ -27,16 +27,18 @@ Node:
 backend server/host
 
 **Routing**
-Express:
+`Express`:
 router and API for different pages and handling internal http calls
 
 **DB**
-MongoDB/Mongoose:
+`MongoDB`:
 holds the persistant state of the user accounts and their progress
+[installation](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/)
 
 **Views**
-ExpressHandlebars: (may refactor later to just ES6 or Glimmer/Vue/React)
+`ExpressHandlebars`: (may refactor later to just ES6 or Glimmer/Vue/React)
 templating engine for rendering and handling user input
+[reference](https://github.com/ericf/express-handlebars)
 
 ### Tasks ###
 
@@ -44,7 +46,7 @@ templating engine for rendering and handling user input
 
 <!-- * call to crosswords API to get JSON using `fetch` -->
 <!-- * render a template using express -->
-* pass JSON data to a template
+<!-- * pass JSON data to a template -->
 * connect to a MongoDB database
 * CRUD on the DB
 

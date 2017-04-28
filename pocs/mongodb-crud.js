@@ -1,5 +1,6 @@
 const {
-  MongoClient
+  MongoClient,
+  ObjectId
 } = require('mongodb');
 
 // Connection URL
@@ -24,9 +25,17 @@ MongoClient.connect(url, function(err, db) {
     // display all then delete
     .then((docs) => {
       console.log(`docs:`, docs);
-      // docs.forEach((doc) => {
-      //   db.collection('puzzles')
-      // });
+      docs.forEach((doc) => {
+        console.log('deleting object with id', doc._id);
+        db.collection('puzzles').deleteOne({
+          "_id": ObjectId(doc._id)
+        });
+      });
+      return db.collection('puzzles').find().toArray();
+    })
+    .then((docs) => {
+      console.log('remaining docs: ', docs);
+      console.log('remaining count', docs.length);
     })
     .then(() => {
       db.close();

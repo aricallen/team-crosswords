@@ -44,14 +44,20 @@ templating engine for rendering and handling user input
 
 ### Tasks ###
 
-**Proof of Concepts**
+**POCs**
 
 <!-- * call to crosswords API to get JSON using `fetch` -->
 <!-- * render a template using express -->
 <!-- * pass JSON data to a template -->
 <!--* connect to a MongoDB database-->
-* CRUD on the DB
+<!--* CRUD on the DB-->
 * websockets
+  - client to server communication
+  - server to client communication
+  - server to all clients
+  - server to room
+  - server to specific socket
+* express + hbs + websockets
 
 **UX**
 
@@ -61,9 +67,10 @@ templating engine for rendering and handling user input
 * can type into squares vertically
 * can type into squares horizontally
 
-**Features**
+**FutureFeatures**
 
 * user accounts
+* db access control
 * saved progress
 * completed test feedback
 * clues

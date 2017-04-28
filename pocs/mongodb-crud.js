@@ -18,6 +18,7 @@ MongoClient.connect(url, function(err, db) {
     .then(() => {
       return db.collection('puzzles').insertMany(manyData, { forceServerObjectId });
     })
+    // update many
     .then(() => {
       db.collection('puzzles').updateMany(
         { "date": { "$gt": 0 } },
@@ -39,6 +40,7 @@ MongoClient.connect(url, function(err, db) {
       });
       return db.collection('puzzles').find().toArray();
     })
+    // verify they have all been deleted
     .then((docs) => {
       console.log('remaining docs: ', docs);
       console.log('remaining count', docs.length);

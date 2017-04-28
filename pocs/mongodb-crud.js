@@ -18,6 +18,12 @@ MongoClient.connect(url, function(err, db) {
     .then(() => {
       return db.collection('puzzles').insertMany(manyData, { forceServerObjectId });
     })
+    .then(() => {
+      db.collection('puzzles').updateMany(
+        { "date": { "$gt": 0 } },
+        { "$set": { "newKey": "hello" } }
+      );
+    })
     // find all
     .then(() => {
       return db.collection('puzzles').find().toArray();

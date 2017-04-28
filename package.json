@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "dev": "babel --source-maps --watch src --out-dir dist",
-    "dev:fetch": "nodemon examples/fetch.js",
-    "dev:express": "nodemon examples/express.js",
-    "dev:exphbs": "nodemon examples/exphbs/app.js",
-    "dev:mongodb": "nodemon examples/mongodb.js",
-    "dev:pmongo": "nodemon examples/pmongo.js",
+    "dev:fetch": "nodemon pocs/fetch.js",
+    "dev:express": "nodemon pocs/express.js",
+    "dev:exphbs": "nodemon pocs/exphbs/app.js",
+    "dev:mongodb": "nodemon pocs/mongodb.js",
+    "dev:mongodb-crud": "nodemon pocs/mongodb-crud.js",
     "test": "mocha tests/**/*.test.js -w --compilers js:babel-register",
     "build:browser": "babel --source-maps --watch tests/browser/src --out-dir tests/browser/dist"
   },

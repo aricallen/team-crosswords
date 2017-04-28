@@ -51,6 +51,7 @@ templating engine for rendering and handling user input
 <!-- * pass JSON data to a template -->
 <!--* connect to a MongoDB database-->
 * CRUD on the DB
+* websockets
 
 **UX**
 

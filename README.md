@@ -54,8 +54,8 @@ templating engine for rendering and handling user input
 * websockets
   <!--- client to server communication-->
   <!--- server to client communication-->
-  - server to all clients
-  - server to room
+  <!--- server to all clients-->
+  <!--- server to room-->
   - server to specific socket
 * express + hbs + websockets
 

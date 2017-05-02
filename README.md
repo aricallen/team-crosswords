@@ -52,8 +52,8 @@ templating engine for rendering and handling user input
 <!--* connect to a MongoDB database-->
 <!--* CRUD on the DB-->
 * websockets
-  - client to server communication
-  - server to client communication
+  <!--- client to server communication-->
+  <!--- server to client communication-->
   - server to all clients
   - server to room
   - server to specific socket

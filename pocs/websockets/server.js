@@ -3,7 +3,8 @@ const app = express();
 const server = require('http').Server(app);  
 const io = require('socket.io')(server);
 
-let socket = null; // the socket
+// chatroom namepsace
+const chatroom = io.of('chatroom');
 
 /**
  * serve all static files in dir
@@ -20,20 +21,20 @@ app.get('/', function(req, res) {
 /**
  * handle connection event
  */
-io.on('connection', (newSocket) => {
+chatroom.on('connection', (newSocket) => {
   console.log('user connected');
   setupSocket(newSocket);
 });
 
 const setupSocket = (socket) => {
   socket.on('textEntered', (text) => {
-    console.log('textEntered', text);
+    // console.log('textEntered', text);
     alertClients(text);
   });
 };
 
 const alertClients = (text) => {
-  io.emit('alertClients', text);
+  chatroom.emit('alertClients', text);
 };
 
 server.listen(3000);
